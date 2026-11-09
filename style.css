@@ -1,0 +1,860 @@
+
+:root {
+  --navy: #173b49;
+  --ocean: #dcefeb;
+  --mint: #a8d9ca;
+  --green: #397f70;
+  --coral: #e99b82;
+  --cream: #faf9f5;
+  --white: #ffffff;
+  --text: #29434a;
+  --muted: #7d9292;
+  --border: #e7eeea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+.topbar {
+  height: 88px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 14px;
+  background: var(--ocean);
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  color: var(--green);
+}
+
+.brand h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand h1 span,
+.footer-brand span {
+  color: var(--coral);
+}
+
+.brand p {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.live-status {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #69b995;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.hero {
+  background: #e4f1ed;
+  padding: 85px 10%;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 550px;
+  z-index: 2;
+}
+
+.eyebrow,
+.section-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--green);
+}
+
+.hero h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  color: var(--navy);
+  margin: 22px 0;
+}
+
+.hero h2 span {
+  color: var(--green);
+}
+
+.hero-description {
+  max-width: 470px;
+  line-height: 1.9;
+  font-size: 15px;
+  color: #637d7c;
+}
+
+.hero-button {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  padding: 15px 23px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 28px;
+  transition: .2s;
+}
+
+.hero-button:hover {
+  background: var(--green);
+  transform: translateY(-2px);
+}
+
+.hero-button span {
+  margin-left: 15px;
+}
+
+.hero-art {
+  width: 330px;
+  height: 300px;
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 3%;
+}
+
+.art-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 260px;
+  height: 260px;
+  background: #b8ddd1;
+  top: 15px;
+  left: 25px;
+}
+
+.circle-two {
+  width: 170px;
+  height: 170px;
+  background: #f2c9b9;
+  bottom: 0;
+  right: 0;
+  opacity: .85;
+}
+
+.art-card {
+  position: absolute;
+  background: white;
+  border-radius: 22px;
+  width: 205px;
+  height: 220px;
+  top: 35px;
+  left: 55px;
+  box-shadow: 0 15px 40px #315f5420;
+  padding: 25px;
+  text-align: center;
+  transform: rotate(-5deg);
+}
+
+.water-icon {
+  font-size: 65px;
+  margin-bottom: 14px;
+}
+
+.art-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+.art-wave {
+  color: var(--green);
+  margin-top: 10px;
+}
+
+.floating-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: 0 5px 20px #315f5415;
+}
+
+.intro {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 85px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.intro h2,
+.section-heading h2 {
+  font-family: "Manrope", sans-serif;
+  color: var(--navy);
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  margin-top: 12px;
+}
+
+.intro > p {
+  color: #758988;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.scanner-section,
+.log-section {
+  max-width: 1100px;
+  padding: 65px 25px;
+  margin: auto;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin-top: 9px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.scanner-badge,
+.log-count {
+  background: var(--ocean);
+  color: var(--green);
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px #244b4410;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.panel-heading h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  color: var(--navy);
+}
+
+.number {
+  color: var(--green);
+  background: var(--ocean);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.upload-box {
+  min-height: 175px;
+  background: #f4f9f6;
+  border: 2px dashed #b5d8cd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
+  cursor: pointer;
+  transition: .2s;
+  color: var(--navy);
+}
+
+.upload-box:hover {
+  background: var(--ocean);
+  border-color: var(--green);
+}
+
+.upload-symbol {
+  width: 43px;
+  height: 43px;
+  background: var(--white);
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  color: var(--green);
+}
+
+.upload-box strong {
+  font-size: 13px;
+}
+
+.upload-box span,
+.upload-box small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+#preview {
+  display: none;
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  margin-top: 18px;
+  border-radius: 12px;
+  background: #f4f9f6;
+}
+
+.field-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--green);
+  margin-top: 23px;
+  margin-bottom: 9px;
+}
+
+#location {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: #fcfdfb;
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  color: var(--navy);
+}
+
+#location:focus {
+  border-color: var(--green);
+}
+
+button {
+  width: 100%;
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: .2s;
+}
+
+button:hover {
+  background: var(--navy);
+  transform: translateY(-1px);
+}
+
+button span {
+  margin-left: 10px;
+}
+
+.privacy-note {
+  text-align: center;
+  font-size: 10px;
+  color: #9aa9a5;
+  margin-top: 13px;
+}
+
+.result-placeholder {
+  min-height: 290px;
+  background: #f5f9f6;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.result-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--ocean);
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.result-placeholder h3 {
+  font-family: "Manrope", sans-serif;
+  color: var(--navy);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.result-placeholder p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+#scores {
+  margin-top: 18px;
+}
+
+.score {
+  font-size: 12px;
+  color: var(--navy);
+  margin: 13px 0;
+  font-weight: 600;
+}
+
+.track {
+  height: 9px;
+  border-radius: 20px;
+  background: #e9efeb;
+  overflow: hidden;
+  margin-top: 7px;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #70bca7, #397f70);
+  border-radius: 20px;
+}
+
+.recommendation-panel {
+  max-width: 1050px;
+  margin: 20px auto 80px;
+  background: #e8f2ec;
+  padding: 35px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.recommendation-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background: white;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.recommendation-panel h2 {
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  margin: 8px 0;
+}
+
+.recommendation-panel p {
+  color: #6c8580;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.log-panel {
+  min-height: 120px;
+}
+
+.empty-log {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.empty-log span {
+  font-size: 30px;
+  color: var(--green);
+}
+
+.report {
+  border-bottom: 1px solid var(--border);
+  padding: 17px 0;
+  font-size: 13px;
+  color: var(--navy);
+  line-height: 1.7;
+}
+
+.mission {
+  text-align: center;
+  background: var(--navy);
+  color: white;
+  padding: 75px 20px;
+}
+
+.mission > span {
+  color: var(--mint);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.mission h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(30px, 5vw, 45px);
+  line-height: 1.3;
+  margin: 20px 0;
+}
+
+.mission p {
+  color: #b8d0ce;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  background: white;
+}
+
+.footer-brand {
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+footer small {
+  color: #9ba9a5;
+  font-size: 10px;
+}
+
+@media (max-width: 750px) {
+  .hero {
+    padding: 65px 8%;
+  }
+
+  .hero-art {
+    display: none;
+  }
+
+  .intro,
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    gap: 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recommendation-panel {
+    margin: 20px;
+    padding: 23px;
+  }
+
+  .topbar {
+    padding: 0 5%;
+  }
+}
+
+// =====================================
+// DRAINSIGHT — AI STORM DRAIN ANALYSIS
+// =====================================
+
+// ADD YOUR TEACHABLE MACHINE MODEL URL HERE LATER
+const MODEL_URL = "";
+
+let model = null;
+let selectedImage = null;
+let reportCount = 0;
+
+const photoInput = document.getElementById("photo");
+const preview = document.getElementById("preview");
+const analyzeButton = document.getElementById("analyze");
+
+// PHOTO UPLOAD
+
+photoInput.addEventListener("change", function(event) {
+  const file = event.target.files[0];
+
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) {
+    alert("Please select an image file.");
+    return;
+  }
+
+  selectedImage = file;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    preview.onload = function() {
+      preview.style.display = "block";
+    };
+
+    preview.src = e.target.result;
+
+    document.getElementById("result").innerHTML = `
+      <div class="result-icon">✓</div>
+      <h3>Image successfully uploaded!</h3>
+      <p>Your photograph is ready for analysis.</p>
+    `;
+
+    document.getElementById("scores").innerHTML = "";
+  };
+
+  reader.readAsDataURL(file);
+});
+
+// LOAD THE AI MODEL
+
+async function loadAI() {
+  if (!MODEL_URL) {
+    throw new Error("Your Teachable Machine model has not been connected yet.");
+  }
+
+  model = await tmImage.load(
+    MODEL_URL + "model.json",
+    MODEL_URL + "metadata.json"
+  );
+}
+
+// INSPECTION RECOMMENDATIONS
+
+function getRecommendation(className) {
+  const name = className.toLowerCase();
+
+  if (name.includes("debris")) {
+    return `
+      <strong>Possible debris detected.</strong>
+      The photograph appears to show visible material
+      around the storm drain. Recommend a closer human
+      inspection to determine whether drainage is affected.
+    `;
+  }
+
+  if (name.includes("clear")) {
+    return `
+      <strong>No obvious visible debris detected.</strong>
+      The drain appears relatively clear in this photograph.
+      Continue routine monitoring. This image cannot confirm
+      that the drain is functioning properly.
+    `;
+  }
+
+  return `
+    <strong>Additional review recommended.</strong>
+    The AI could not confidently classify this photograph.
+    Try taking another clear photograph or request a human inspection.
+  `;
+}
+
+// ANALYZE PHOTOGRAPH
+
+analyzeButton.addEventListener("click", async function() {
+
+  if (!selectedImage) {
+    alert("Please upload a storm drain photograph first!");
+    return;
+  }
+
+  if (!preview.complete || !preview.naturalWidth) {
+    alert("Please wait for your photograph to finish loading.");
+    return;
+  }
+
+  if (!MODEL_URL) {
+    document.getElementById("result").innerHTML = `
+      <div class="result-icon">✧</div>
+      <h3>Photograph received!</h3>
+      <p>Your AI model still needs to be connected.</p>
+    `;
+
+    document.getElementById("recommendation").innerHTML = `
+      <p>Your photograph is ready. Connect the Teachable Machine model to activate AI analysis.</p>
+    `;
+
+    return;
+  }
+
+  try {
+    analyzeButton.disabled = true;
+    analyzeButton.textContent = "ANALYZING...";
+
+    if (!model) {
+      await loadAI();
+    }
+
+    const predictions = await model.predict(preview);
+
+    predictions.sort((a, b) =>
+      b.probability - a.probability
+    );
+
+    const best = predictions[0];
+
+    const confidence =
+      (best.probability * 100).toFixed(1);
+
+    const className = best.className;
+
+    // DISPLAY MAIN RESULT
+
+    document.getElementById("result").innerHTML = `
+      <div class="result-icon">✧</div>
+      <h3>${className}</h3>
+      <p>${confidence}% model confidence</p>
+    `;
+
+    // DISPLAY ALL CLASS CONFIDENCE SCORES
+
+    document.getElementById("scores").innerHTML =
+      predictions.map(p => `
+        <div class="score">
+          <div>${p.className}: ${(p.probability * 100).toFixed(1)}%</div>
+          <div class="track">
+            <div class="fill"
+              style="width:${p.probability * 100}%">
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+    // DISPLAY RECOMMENDATION
+
+    document.getElementById("recommendation").innerHTML =
+      `<p>${getRecommendation(className)}</p>`;
+
+    // ADD OBSERVATION TO LOG
+
+    const location =
+      document.getElementById("location").value.trim()
+      || "Location not provided";
+
+    const report = document.createElement("div");
+
+    report.className = "report";
+
+    report.textContent =
+      `${location} | ${className} | ${confidence}% confidence`;
+
+    const reports = document.getElementById("reports");
+
+    if (reportCount === 0) {
+      reports.innerHTML = "";
+    }
+
+    reports.prepend(report);
+
+    reportCount++;
+
+    document.getElementById("report-count").textContent =
+      `${reportCount} REPORT${reportCount === 1 ? "" : "S"}`;
+
+  } catch (error) {
+
+    document.getElementById("result").innerHTML = `
+      <div class="result-icon">!</div>
+      <h3>Analysis unsuccessful</h3>
+      <p>${error.message}</p>
+    `;
+
+  } finally {
+    analyzeButton.disabled = false;
+    analyzeButton.innerHTML =
+      'Analyze photograph <span>→</span>';
+  }
+});
