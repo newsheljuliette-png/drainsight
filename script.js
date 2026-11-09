@@ -384,13 +384,13 @@ reportForm.addEventListener("submit", async function(event) {
 
     reportForm.style.display = "none";
 
-  } catch (error) {
-    reportStatus.textContent =
-      "The report could not be sent. Please try again.";
+} catch (error) {
+  reportStatus.textContent =
+    "Report error: " + error.message;
 
-    reportButton.disabled = false;
-    reportButton.textContent = "Submit Drain Report";
-  }
+  reportButton.disabled = false;
+  reportButton.textContent = "Submit Drain Report";
+}
 });
 
 // Start the AI.
