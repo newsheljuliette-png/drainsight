@@ -5,121 +5,248 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How It Works | DrainSight</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    .info-nav {
-      background: #103449;
-      padding: 22px 8%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
+    * {
+      box-sizing: border-box;
     }
-    .info-nav a {
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f8f6;
+      color: #15394a;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #103449;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
+      font-size: 15px;
     }
-    .info-nav a:hover { color: #80dcc8; }
-    .info-hero {
-      background: linear-gradient(120deg,#12384d,#20596a);
+
+    nav a:hover {
+      color: #78dfca;
+    }
+
+    header {
+      background: linear-gradient(120deg, #12384c, #21566a);
       color: white;
-      padding: 85px 10%;
+      text-align: center;
+      padding: 75px 20px;
     }
-    .info-hero h1 { font-size: clamp(36px,5vw,60px); }
-    .info-hero p { max-width: 650px; line-height: 1.8; }
-    .info-content {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 24px;
+
+    header h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
     }
-    .info-card {
-      background: #f0f8f5;
-      padding: 30px;
+
+    header p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
       border-radius: 18px;
-      margin-bottom: 24px;
-      color: #173b49;
+      padding: 32px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
-    .info-card h2 { margin-bottom: 12px; }
-    .info-card p { line-height: 1.8; }
+
+    h2 {
+      color: #16475a;
+    }
+
+    .number {
+      display: inline-block;
+      background: #def5ee;
+      color: #176454;
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #16475a;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .button:hover {
+      background: #257783;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #103449;
+      color: white;
+    }
   </style>
 </head>
+
 <body>
 
-<nav class="info-nav">
-  <a href="index.html">Home</a>
-  <a href="how-it-works.html">How It Works</a>
-  <a href="why-it-matters.html">Why It Matters</a>
-  <a href="about.html">About Us</a>
-</nav>
+  <!-- Navigation menu -->
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./how-it-works.html">How It Works</a>
+    <a href="./why-it-matters.html">Why It Matters</a>
+    <a href="./about.html">About Us</a>
+  </nav>
 
-<section class="info-hero">
-  <h1>How DrainSight Works</h1>
-  <p>
-    DrainSight uses artificial intelligence to help people
-    recognize visible storm drain conditions from photographs.
-  </p>
-</section>
-
-<main class="info-content">
-
-  <section class="info-card">
-    <h2>01 — Take a Photograph</h2>
+  <header>
+    <h1>How DrainSight Works</h1>
     <p>
-      Take a clear photograph of a storm drain from a safe
-      location, such as a sidewalk. Never enter a roadway
-      or approach moving traffic to take a picture.
+      Learn how our AI-powered storm drain scanner
+      helps identify visible drainage concerns
+      through simple photographs.
     </p>
-  </section>
+  </header>
 
-  <section class="info-card">
-    <h2>02 — Upload Your Image</h2>
-    <p>
-      Visit the DrainSight homepage and select your photograph.
-      The website displays a preview so you can make sure
-      you selected the correct image.
-    </p>
-  </section>
+  <main>
 
-  <section class="info-card">
-    <h2>03 — Let AI Analyze It</h2>
-    <p>
-      DrainSight uses an image classification model trained
-      to recognize three categories: Clear, Visible Debris,
-      and Uncertain.
-    </p>
-  </section>
+    <section class="card">
+      <h2>What Is DrainSight?</h2>
+      <p>
+        DrainSight is a student-created website designed
+        to help people recognize potential storm drain
+        problems in Westport, Connecticut.
+      </p>
+      <p>
+        Our website uses artificial intelligence to examine
+        photographs of storm drains and identify whether
+        they appear clear, contain visible debris,
+        or cannot be confidently classified.
+      </p>
+    </section>
 
-  <section class="info-card">
-    <h2>04 — Understand Your Results</h2>
-    <p>
-      Clear means the drain appears unobstructed.
-      Visible Debris means the photograph shows potential
-      obstructions such as leaves or litter.
-      Uncertain means the image cannot be reliably categorized.
-    </p>
-  </section>
+    <section class="card">
+      <span class="number">STEP 01</span>
+      <h2>Take a Photograph</h2>
+      <p>
+        Find a storm drain that you can safely photograph
+        from a sidewalk or another safe public area.
+        Make sure the drain is clearly visible.
+        Never enter the road or touch a drain to get a photo.
+      </p>
+    </section>
 
-  <section class="info-card">
-    <h2>05 — Take the Next Step</h2>
-    <p>
-      If you notice a possible drainage concern, consider
-      reporting it through an appropriate local government
-      channel. Do not attempt to remove heavy debris or
-      enter storm drains.
-    </p>
-  </section>
+    <section class="card">
+      <span class="number">STEP 02</span>
+      <h2>Upload Your Photo</h2>
+      <p>
+        Visit the DrainSight homepage and upload
+        your storm drain photograph using the
+        photo upload feature.
+      </p>
+      <p>
+        You can also enter a general location
+        to help describe where the drain is.
+        Avoid including private addresses or
+        personal information.
+      </p>
+    </section>
 
-  <section class="info-card">
-    <h2>Important Reminder</h2>
-    <p>
-      DrainSight is a student-built prototype. Its AI results
-      are estimates and may be incorrect. It cannot inspect
-      underground pipes, confirm drainage performance,
-      or predict whether flooding will occur.
-    </p>
-  </section>
+    <section class="card">
+      <span class="number">STEP 03</span>
+      <h2>Let the AI Analyze It</h2>
+      <p>
+        Click the Analyze Photograph button.
+        Our image recognition model, trained using
+        Google Teachable Machine, examines the image
+        and compares it to patterns learned during training.
+      </p>
+      <p>
+        The AI then displays its predicted classification
+        and confidence scores.
+      </p>
+    </section>
 
-</main>
+    <section class="card">
+      <span class="number">STEP 04</span>
+      <h2>Understand Your Results</h2>
+
+      <h3>Clear</h3>
+      <p>
+        The drain appears relatively free of visible debris.
+        This does not guarantee that water can flow
+        properly underneath the surface.
+      </p>
+
+      <h3>Visible Debris</h3>
+      <p>
+        The AI detects visual patterns associated with
+        leaves, trash, or other debris near a storm drain.
+        This could indicate a concern worth reviewing.
+      </p>
+
+      <h3>Uncertain</h3>
+      <p>
+        The image may be difficult to classify,
+        or the model may recognize patterns associated
+        with its uncertain training examples.
+        Consider taking another clear photograph
+        from a safe location.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>How Accurate Is DrainSight?</h2>
+      <p>
+        DrainSight is an early-stage student AI prototype.
+        Its predictions are not always correct.
+        Lighting, camera angles, image quality,
+        and limited training examples can affect results.
+      </p>
+      <p>
+        A high confidence score does not guarantee
+        that the prediction is accurate.
+        DrainSight is an educational observation tool,
+        not an official drainage inspection service.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Ready to Try It?</h2>
+      <p>
+        Upload a storm drain photograph and explore
+        what DrainSight's AI predicts.
+      </p>
+      <a class="button" href="./index.html">
+        Try the AI Scanner
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    DrainSight | Westport, Connecticut
+    <p>Student-created stormwater awareness project</p>
+  </footer>
 
 </body>
 </html>
