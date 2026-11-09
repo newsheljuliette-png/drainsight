@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why It Matters | DrainSight</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f8f6;
+      color: #15394a;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #103449;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #78dfca;
+    }
+
+    header {
+      background: linear-gradient(120deg, #12384c, #21566a);
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    header h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    h2 { color: #16475a; }
+
+    .highlight {
+      background: #def5ee;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #16475a;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .button:hover {
+      background: #257783;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #103449;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 34px; }
+      .card { padding: 22px; }
+      nav { gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/drainsight/">Home</a>
+    <a href="./how-it-works.html">How It Works</a>
+    <a href="./why-it-matters.html">Why It Matters</a>
+    <a href="./about.html">About Us</a>
+  </nav>
+
+  <header>
+    <h1>Why DrainSight Matters</h1>
+    <p>
+      Small drainage problems can have a big impact.
+      We're exploring how technology can help communities
+      recognize potential problems earlier.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>Why Are Storm Drains Important?</h2>
+      <p>
+        Storm drains help collect rainwater from roads,
+        sidewalks, and other paved surfaces. They are an
+        important part of a community's stormwater system.
+      </p>
+      <p>
+        When heavy rain occurs, properly functioning
+        drainage systems help move water away from
+        areas where it could accumulate.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What Happens When Drains Become Blocked?</h2>
+      <p>
+        Leaves, litter, and other debris can accumulate
+        around storm drain openings. When enough debris
+        builds up, it can restrict water entering the drain.
+      </p>
+      <p>
+        This can contribute to standing water and
+        localized flooding, especially during heavy rain.
+        Flooding can also have other causes, including
+        rainfall intensity and drainage system capacity.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Why Does This Matter in Westport?</h2>
+      <p>
+        Westport, Connecticut, experiences seasonal
+        rainfall and storms. Like many communities,
+        it relies on stormwater infrastructure to
+        manage runoff from developed areas.
+      </p>
+      <p>
+        Recognizing visible debris near storm drains
+        can help raise awareness about drainage
+        maintenance and the importance of keeping
+        public spaces clean.
+      </p>
+
+      <div class="highlight">
+        <strong>Our goal:</strong>
+        Help make stormwater awareness more accessible
+        through a simple, student-created AI tool.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How Can Artificial Intelligence Help?</h2>
+      <p>
+        Inspecting photographs manually can take time.
+        Image recognition technology can help identify
+        visual patterns in photographs and organize
+        observations into categories.
+      </p>
+      <p>
+        DrainSight uses a trained image classification
+        model to identify three possible results:
+        Clear, Visible Debris, and Uncertain.
+      </p>
+      <p>
+        These predictions can help users notice
+        possible concerns, but they do not replace
+        professional inspections.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Real-World Examples</h2>
+
+      <h3>Example 1: A Clear Drain</h3>
+      <p>
+        A photograph shows a storm drain with little
+        visible debris. DrainSight may classify
+        the image as Clear.
+      </p>
+
+      <h3>Example 2: Leaves Covering a Drain</h3>
+      <p>
+        A storm drain is surrounded by fallen leaves.
+        DrainSight may classify the photograph as
+        Visible Debris, indicating that the area
+        could deserve closer attention.
+      </p>
+
+      <h3>Example 3: A Blurry Photograph</h3>
+      <p>
+        A photograph is too blurry or unclear to
+        evaluate reliably. DrainSight may classify
+        it as Uncertain.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Our Vision for the Future</h2>
+      <p>
+        DrainSight is currently an early-stage
+        student project. With more training images,
+        testing, and feedback, we hope to improve
+        its ability to recognize visible drainage
+        concerns.
+      </p>
+      <p>
+        In the future, tools like DrainSight could
+        support community education and help
+        organize observations for further review.
+        Our current website does not automatically
+        send reports to local authorities.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Help Us Make a Difference</h2>
+      <p>
+        Explore our AI scanner and learn more
+        about how storm drains affect our community.
+      </p>
+
+      <a class="button" href="/drainsight/">
+        Try DrainSight
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    DrainSight | Westport, Connecticut
+    <p>Student-created stormwater awareness project</p>
+  </footer>
+
+</body>
+</html>
