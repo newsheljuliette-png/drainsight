@@ -363,13 +363,7 @@ reportForm.addEventListener("submit", async function(event) {
     new Date().toISOString()
   );
 
-  // Attach the uploaded image for review.
-  formData.append(
-    "photo",
-    selectedImage,
-    selectedImage.name
-  );
-
+ 
   try {
     const response = await fetch(FORM_ENDPOINT, {
       method: "POST",
