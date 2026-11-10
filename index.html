@@ -1,14 +1,25 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="manifest" href="/drainsight/manifest.webmanifest">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="DrainSight">
-
-<link rel="manifest" href="/drainsight/manifest.webmanifest">
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>DrainSight AI</title>
+
+  <!-- Progressive Web App settings -->
+  <link rel="manifest" href="/drainsight/manifest.webmanifest">
+  <meta name="theme-color" content="#102D36">
+  <meta name="description" content="DrainSight uses AI to identify potential storm drain blockages and support smarter stormwater management.">
+
+  <!-- iPhone app support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="DrainSight">
+  <link rel="apple-touch-icon" href="/drainsight/icon-192.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/drainsight/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/drainsight/icon-512.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -280,7 +291,7 @@
       line-height: 2;
     }
 
-    @media(max-width: 550px) {
+    @media (max-width: 550px) {
       .card {
         padding: 22px;
       }
@@ -297,120 +308,117 @@
 </head>
 
 <body>
-  
 
-<nav style="background:#103449; padding:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
-<a href="/drainsight/" style="color:white; text-decoration:none; font-weight:bold;">Home</a>
-  <a href="./how-it-works.html" style="color:white; text-decoration:none; font-weight:bold;">How It Works</a>
-  <a href="./why-it-matters.html" style="color:white; text-decoration:none; font-weight:bold;">Why It Matters</a>
-  <a href="./about.html" style="color:white; text-decoration:none; font-weight:bold;">About Us</a>
-</nav>
+  <nav style="background:#103449; padding:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
+    <a href="/drainsight/" style="color:white; text-decoration:none; font-weight:bold;">Home</a>
+    <a href="./how-it-works.html" style="color:white; text-decoration:none; font-weight:bold;">How It Works</a>
+    <a href="./why-it-matters.html" style="color:white; text-decoration:none; font-weight:bold;">Why It Matters</a>
+    <a href="./about.html" style="color:white; text-decoration:none; font-weight:bold;">About Us</a>
+  </nav>
 
-
-<header>
-  <div>
-    <div class="logo">🌧 DRAINSIGHT</div>
-    <div class="location">WESTPORT, CONNECTICUT</div>
-  </div>
-  <div class="status">● SYSTEM ONLINE</div>
-</header>
-
-<section class="hero">
-  <div class="eyebrow">SMARTER STORMWATER MANAGEMENT</div>
-  <h1>See problems before they <span>flood.</span></h1>
-  <p>
-    AI-powered storm drain observations for a cleaner,
-    safer Westport. Upload a photograph and let DrainSight
-    identify potential drainage concerns.
-  </p>
-</section>
-
-<main>
-
-  <section class="card">
-    <div class="section-title">
-      <div class="number">01</div>
-      <h2>Upload your photograph</h2>
+  <header>
+    <div>
+      <div class="logo">🌧 DRAINSIGHT</div>
+      <div class="location">WESTPORT, CONNECTICUT</div>
     </div>
+    <div class="status">● SYSTEM ONLINE</div>
+  </header>
 
-    <p class="description">
-      Select a photograph of a storm drain that you would
-      like DrainSight to analyze.
-    </p>
-
-    <label class="upload-area" for="photo">
-      <div class="upload-icon">⬆️</div>
-      <strong>Choose a photograph</strong>
-      <small>
-        Click here to browse your pictures<br>
-        JPG, PNG, or WEBP supported
-      </small>
-    </label>
-
-    <input
-      type="file"
-      id="photo"
-      accept="image/*"
-    >
-
-    <img id="preview" alt="Uploaded storm drain photograph">
-
-    <label class="field-label" for="location">
-      DRAIN LOCATION
-    </label>
-
-    <input
-      class="location-input"
-      id="location"
-      type="text"
-      placeholder="Enter drain location"
-      value="Main Street, Westport"
-    >
-
-    <button id="analyze" type="button">
-      Analyze photograph →
-    </button>
-
-    <p class="fine-print">
-      Your photograph is used for this demonstration.
+  <section class="hero">
+    <div class="eyebrow">SMARTER STORMWATER MANAGEMENT</div>
+    <h1>See problems before they <span>flood.</span></h1>
+    <p>
+      AI-powered storm drain observations for a cleaner,
+      safer Westport. Upload a photograph and let DrainSight
+      identify potential drainage concerns.
     </p>
   </section>
 
-  <section class="card">
-    <div class="section-title">
-      <div class="number">02</div>
-      <h2>AI Analysis Results</h2>
-    </div>
+  <main>
 
-    <p class="description">
-      Your AI classification and confidence scores will appear here.
-    </p>
+    <section class="card">
+      <div class="section-title">
+        <div class="number">01</div>
+        <h2>Upload your photograph</h2>
+      </div>
 
-    <div id="result" class="result-box">
-      <h3>✨ Ready for analysis!</h3>
-      <p>Upload a photograph to get started.</p>
-    </div>
+      <p class="description">
+        Select a photograph of a storm drain that you would
+        like DrainSight to analyze.
+      </p>
 
-    <div id="scores" class="result-box hidden"></div>
+      <label class="upload-area" for="photo">
+        <div class="upload-icon">⬆️</div>
+        <strong>Choose a photograph</strong>
+        <small>
+          Click here to browse your pictures<br>
+          JPG, PNG, or WEBP supported
+        </small>
+      </label>
 
-    <div id="recommendation" class="result-box hidden">
-    </div>
-  </section>
+      <input
+        type="file"
+        id="photo"
+        accept="image/*"
+      >
 
-</main>
+      <img id="preview" alt="Uploaded storm drain photograph">
 
-<footer>
-  <strong>DRAINSIGHT AI</strong><br>
-  Building a smarter, cleaner, safer Westport.<br>
-  A student innovation project.
-</footer>
+      <label class="field-label" for="location">
+        DRAIN LOCATION
+      </label>
 
-<!-- AI LIBRARIES: KEEP THIS ORDER -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+      <input
+        class="location-input"
+        id="location"
+        type="text"
+        placeholder="Enter drain location"
+        value="Main Street, Westport"
+      >
 
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+      <button id="analyze" type="button">
+        Analyze photograph →
+      </button>
 
-<script src="script.js?v=6"></script>
+      <p class="fine-print">
+        Your photograph is used for this demonstration.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <div class="number">02</div>
+        <h2>AI Analysis Results</h2>
+      </div>
+
+      <p class="description">
+        Your AI classification and confidence scores will appear here.
+      </p>
+
+      <div id="result" class="result-box">
+        <h3>✨ Ready for analysis!</h3>
+        <p>Upload a photograph to get started.</p>
+      </div>
+
+      <div id="scores" class="result-box hidden"></div>
+
+      <div id="recommendation" class="result-box hidden"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>DRAINSIGHT AI</strong><br>
+    Building a smarter, cleaner, safer Westport.<br>
+    A student innovation project.
+  </footer>
+
+  <!-- AI libraries: keep this order -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+  <!-- Existing AI classification and alert logic -->
+  <script src="script.js?v=6"></script>
+
 </body>
 </html>
-
