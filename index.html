@@ -418,7 +418,25 @@
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
   <!-- Existing AI classification and alert logic -->
-  <script src="script.js?v=6"></script>
+  
+<script src="script.js?v=6"></script>
+
+<!-- Register DrainSight Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/drainsight/service-worker.js")
+        .then(() => {
+          console.log("DrainSight service worker registered!");
+        })
+        .catch((error) => {
+          console.error("Service worker error:", error);
+        });
+    });
+  }
+</script>
 
 </body>
 </html>
+
