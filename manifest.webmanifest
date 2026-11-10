@@ -2,11 +2,22 @@
 {
   "name": "DrainSight - AI Drain Monitoring",
   "short_name": "DrainSight",
-  "description": "AI-powered drain monitoring to help identify visible debris and potential blockages.",
+  "description": "AI-powered drain monitoring to identify visible debris and potential blockages.",
   "start_url": "/drainsight/",
   "scope": "/drainsight/",
   "display": "standalone",
   "background_color": "#102D36",
   "theme_color": "#102D36",
-  "icons": []
+  "icons": [
+    {
+      "src": "/drainsight/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/drainsight/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
